@@ -1,6 +1,4 @@
 let tl=gsap.timeline({defaults:{duration:0.5}});
-
-
     tl.from("#image",{
             
         opacity:0,
@@ -40,7 +38,7 @@ let tl=gsap.timeline({defaults:{duration:0.5}});
             start:"top top",
             end:"85% top",
             scrub:1,
-            markers:true,
+        
             toggleActions:"play none none reverse"
         }
     })
@@ -55,13 +53,13 @@ let tl=gsap.timeline({defaults:{duration:0.5}});
             start:"top top",
             end:"85% top",
             scrub:1,
-            markers:true,
+          
             toggleActions:"play none none reverse"
         }
     })
     gsap.to("#navbar",
     {
-     
+     color:"black",
         duration:2,
       backgroundColor:"#e6ffff",
       height:"50px",
@@ -93,7 +91,22 @@ let tl=gsap.timeline({defaults:{duration:0.5}});
             toggleActions:"play none none reverse"
         }
     })
+    gsap.from("#logo",
+    {
+        scale:0.8,
+        opacity:0,
+        duration:1,
+        
+    })
     
 
 
-    
+    let hambi=document.querySelector("#hambimg");
+
+
+    hambi.addEventListener("click",()=>{
+        let hamb=document.querySelector("#hamb");
+            hamb.classList.toggle("dnone");
+      
+    })
+  
